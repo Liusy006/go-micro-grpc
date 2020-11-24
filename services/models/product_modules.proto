@@ -1,0 +1,7 @@
+syntax = "proto3";
+package services;
+
+message ProductModel{
+    int32 id = 1;
+    string name = 2;
+}

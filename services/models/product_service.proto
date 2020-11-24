@@ -1,0 +1,16 @@
+syntax = "proto3";
+package services;
+
+import "product_modules.proto";
+
+message ProductRequest{
+    int32 size=1;
+}
+
+message ProductResponse{
+    repeated ProductModel data=1;
+}
+
+service ProductService{
+    rpc GetProductList(ProductRequest) returns(ProductResponse);
+}
